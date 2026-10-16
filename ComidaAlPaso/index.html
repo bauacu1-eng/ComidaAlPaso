@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ✏️ EDITAR: título y descripción que aparecen en Google y al compartir el enlace -->
+  <title>NOMBRE DE TU PARRILLADA | Parrilladas para compartir</title>
+  <meta name="description" content="Parrilladas argentinas para compartir. Elegí tu parrillada, armá tu pedido y envialo por WhatsApp." />
+  <meta name="theme-color" content="#120f0d" />
+  <meta property="og:title" content="NOMBRE DE TU PARRILLADA" />
+  <meta property="og:description" content="Parrilladas argentinas para compartir. Pedí por WhatsApp." />
+  <meta property="og:image" content="images/images-5.jpg" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>" />
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Precarga de la imagen de portada para que aparezca rápido -->
+  <link rel="preload" as="image" href="images/images-5.jpg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- ===================== NAVEGACIÓN ===================== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="#inicio" class="brand" aria-label="Ir al inicio">
+        <!-- El logo se configura en script.js (CONFIG.logo). Si está vacío se muestra el ícono de fuego. -->
+        <span class="brand__mark" data-logo aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 2c.6 3.2-1 5-2.6 6.8C7.8 10.6 6 12.6 6 15.5A6 6 0 0 0 12 22a6 6 0 0 0 6-6.3c0-2.2-1-4-2.3-5.4.1 1.6-.4 2.9-1.6 3.6.4-3.4-.5-7.4-2.1-11.9Z"/></svg>
+        </span>
+        <span class="brand__name" data-cfg="nombre">NOMBRE DE TU PARRILLADA</span>
+      </a>
+
+      <nav class="nav__menu" id="menu" aria-label="Navegación principal">
+        <ul class="nav__links">
+          <li><a href="#inicio" class="nav__link">Inicio</a></li>
+          <li><a href="#catalogo" class="nav__link">Catálogo</a></li>
+          <li><a href="#nosotros" class="nav__link">Nosotros</a></li>
+          <li><a href="#contacto" class="nav__link">Contacto</a></li>
+        </ul>
+        <button class="btn btn--fire btn--sm" type="button" data-action="pedido">Hacer un pedido</button>
+      </nav>
+
+      <div class="nav__tools">
+        <button class="cart-btn" type="button" data-action="open-cart" aria-label="Abrir mi pedido">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 7h14l-1.2 11.1a2 2 0 0 1-2 1.9H8.2a2 2 0 0 1-2-1.9L5 7Zm4 0V6a3 3 0 0 1 6 0v1"/></svg>
+          <span class="cart-btn__count" data-cart-count aria-live="polite">0</span>
+        </button>
+        <button class="burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- ===================== INICIO / PORTADA (Images 5) ===================== -->
+    <section class="hero bg-section" id="inicio" data-bg="inicio">
+      <div class="embers" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <div class="container hero__content">
+        <p class="eyebrow reveal-in" style="--d:0">Parrilla argentina · Para compartir</p>
+        <h1 class="hero__title reveal-in" style="--d:1">
+          El fuego lento<br />hace la <em>mesa grande</em>
+        </h1>
+        <p class="hero__text reveal-in" style="--d:2">
+          En <strong data-cfg="nombre">NOMBRE DE TU PARRILLADA</strong> preparamos parrilladas con cortes elegidos,
+          brasa paciente y el sabor de siempre. Vos elegí la ocasión; nosotros ponemos la parrilla
+          para que solo te ocupes de compartir.
+        </p>
+        <div class="hero__actions reveal-in" style="--d:3">
+          <a href="#catalogo" class="btn btn--fire">Ver catálogo</a>
+          <button type="button" class="btn btn--ghost" data-action="pedido">Hacer un pedido</button>
+        </div>
+        <!-- ✏️ La frase de marca se edita en script.js (CONFIG.eslogan) -->
+        <p class="hero__tagline reveal-in" style="--d:4">
+          <span class="line" aria-hidden="true"></span>
+          <span data-cfg="eslogan">“Brasa, tiempo y buena compañía.”</span>
+        </p>
+      </div>
+      <a href="#ventajas" class="hero__scroll" aria-label="Bajar a la siguiente sección"><span></span></a>
+    </section>
+
+    <!-- ===================== VENTAJAS ===================== -->
+    <section class="section perks" id="ventajas" aria-labelledby="ventajas-title">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Por qué elegirnos</p>
+          <h2 class="section__title" id="ventajas-title">Una parrillada pensada <em>de principio a fin</em></h2>
+        </div>
+        <div class="perks__grid">
+          <article class="perk reveal">
+            <span class="perk__icon" aria-hidden="true">🔥</span>
+            <h3>Cocción a la brasa</h3>
+            <p>Respetamos los tiempos de la parrilla: fuego parejo, paciencia y punto justo en cada corte.</p>
+          </article>
+          <article class="perk reveal">
+            <span class="perk__icon" aria-hidden="true">🥩</span>
+            <h3>Cortes seleccionados</h3>
+            <p>Elegimos la materia prima con criterio, porque una buena parrillada empieza mucho antes del fuego.</p>
+          </article>
+          <article class="perk reveal">
+            <span class="perk__icon" aria-hidden="true">👨‍👩‍👧‍👦</span>
+            <h3>Opciones para cada mesa</h3>
+            <p>Desde una parrillada individual hasta una familiar: elegí la que mejor se adapte a tu reunión.</p>
+          </article>
+          <article class="perk reveal">
+            <span class="perk__icon" aria-hidden="true">💬</span>
+            <h3>Pedido simple y personal</h3>
+            <p>Armás tu pedido acá y lo coordinamos por WhatsApp, con atención directa y sin vueltas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CATÁLOGO (fondo Images 3) ===================== -->
+    <section class="section catalog bg-section" id="catalogo" data-bg="catalogo" aria-labelledby="catalogo-title">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Catálogo</p>
+          <h2 class="section__title" id="catalogo-title">Elegí tu <em>parrillada</em></h2>
+          <p class="section__lead">Agregá las que quieras a tu pedido y enviánoslo por WhatsApp. Lo coordinamos con vos.</p>
+        </div>
+
+        <!-- Filtros y orden -->
+        <div class="catalog__toolbar reveal">
+          <div class="filters" role="group" aria-label="Filtrar por categoría" id="filters">
+            <!-- Los botones se generan desde CONFIG.categorias en script.js -->
+          </div>
+          <label class="sort">
+            <span class="sort__label">Ordenar</span>
+            <select id="sort" aria-label="Ordenar productos">
+              <option value="destacados">Destacados</option>
+              <option value="precio-asc">Menor precio</option>
+              <option value="precio-desc">Mayor precio</option>
+              <option value="personas-asc">Menos personas</option>
+              <option value="personas-desc">Más personas</option>
+            </select>
+          </label>
+        </div>
+
+        <p class="price-note" id="price-note" hidden>
+          <strong>Precios de referencia.</strong> Los valores mostrados son ejemplos editables y no corresponden a precios reales.
+          El precio final se confirma por WhatsApp.
+        </p>
+
+        <!-- Las tarjetas se generan desde CONFIG.productos en script.js -->
+        <div class="products" id="products" aria-live="polite"></div>
+        <p class="products__empty" id="products-empty" hidden>No hay parrilladas en esta categoría por ahora.</p>
+      </div>
+    </section>
+
+    <!-- ===================== LLAMADA A LA ACCIÓN (fondo Images 6) ===================== -->
+    <section class="cta bg-section" data-bg="pedido" aria-labelledby="cta-title">
+      <div class="container cta__inner reveal">
+        <p class="eyebrow">¿Se viene el asado?</p>
+        <h2 class="cta__title" id="cta-title">Armá tu pedido en <em>dos minutos</em></h2>
+        <p class="cta__text">Elegí tus parrilladas, revisá el resumen y envialo por WhatsApp. Te respondemos para coordinar entrega y pago.</p>
+        <div class="cta__actions">
+          <button type="button" class="btn btn--fire btn--lg" data-action="pedido">Hacer un pedido</button>
+          <a class="btn btn--ghost btn--lg" data-wa="consulta" href="#" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== NOSOTROS (Images 4) ===================== -->
+    <section class="section about" id="nosotros" aria-labelledby="nosotros-title">
+      <div class="container about__grid">
+        <figure class="about__media reveal">
+          <img src="images/images-4.jpg" data-img="nosotros" width="335" height="597" loading="lazy"
+               alt="Tabla de madera con cortes de carne asada en tiras, acompañados de salsa fresca y guacamole" />
+          <figcaption class="about__badge"><span>Hecho</span><strong>a la brasa</strong></figcaption>
+        </figure>
+
+        <div class="about__text">
+          <p class="eyebrow reveal">Nosotros</p>
+          <h2 class="section__title reveal" id="nosotros-title">Pasión por la parrilla, <em>respeto por la mesa</em></h2>
+          <div class="reveal">
+            <p>
+              Para nosotros, la parrilla no es solo una forma de cocinar: es una manera de reunirnos.
+              Crecimos con el olor a leña, el ritual de prender el fuego temprano y esa espera
+              que se hace corta cuando hay buena compañía. De esa tradición argentina nace
+              <strong data-cfg="nombre">NOMBRE DE TU PARRILLADA</strong>.
+            </p>
+            <p>
+              Cuidamos cada detalle: elegimos los cortes con atención, los preparamos con paciencia
+              y armamos cada pedido como si fuera para nuestra propia mesa. Creemos que la calidad
+              se nota en el primer bocado, y por eso no la negociamos.
+            </p>
+            <p>
+              Nos gusta conocer a quienes nos eligen. Escuchamos qué necesitás, te ayudamos a elegir
+              la parrillada justa para tu reunión y estamos atentos hasta que el pedido llega a tu mesa.
+              Tu satisfacción es lo que nos hace volver a encender la parrilla cada día.
+            </p>
+          </div>
+
+          <!-- ✏️ Historia real del negocio: se edita en script.js (CONFIG.historia) -->
+          <div class="story reveal" id="story"></div>
+
+          <ul class="about__values reveal">
+            <li><strong>Tradición</strong><span>Parrilla argentina de verdad</span></li>
+            <li><strong>Calidad</strong><span>Ingredientes elegidos con cuidado</span></li>
+            <li><strong>Cercanía</strong><span>Atención personalizada</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== OPINIONES (preparada para el futuro) ===================== -->
+    <section class="section reviews" id="opiniones" aria-labelledby="opiniones-title">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Opiniones</p>
+          <h2 class="section__title" id="opiniones-title">Lo que dicen <em>nuestros clientes</em></h2>
+        </div>
+        <!-- Se completan desde CONFIG.resenas en script.js. Solo cargá reseñas reales. -->
+        <div class="reviews__grid" id="reviews"></div>
+      </div>
+    </section>
+
+    <!-- ===================== PREGUNTAS FRECUENTES ===================== -->
+    <section class="section faq" id="preguntas" aria-labelledby="faq-title">
+      <div class="container faq__grid">
+        <div class="section__head section__head--left reveal">
+          <p class="eyebrow">Preguntas frecuentes</p>
+          <h2 class="section__title" id="faq-title">Todo lo que querés <em>saber antes de pedir</em></h2>
+          <p class="section__lead">¿No encontrás tu respuesta? Escribinos y te ayudamos.</p>
+          <a class="btn btn--ghost" data-wa="consulta" href="#" target="_blank" rel="noopener">Preguntar por WhatsApp</a>
+        </div>
+        <!-- Las preguntas se generan desde CONFIG.preguntas en script.js -->
+        <div class="accordion reveal" id="faq"></div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACTO ===================== -->
+    <section class="section contact" id="contacto" aria-labelledby="contacto-title">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Contacto</p>
+          <h2 class="section__title" id="contacto-title">Hablemos de <em>tu próxima parrillada</em></h2>
+        </div>
+
+        <div class="contact__grid">
+          <div class="contact__info reveal">
+            <a class="wa-card" data-wa="consulta" href="#" target="_blank" rel="noopener">
+              <span class="wa-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5 0 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+              </span>
+              <span>
+                <strong>Escribinos por WhatsApp</strong>
+                <small>La forma más rápida de hacer tu pedido</small>
+              </span>
+            </a>
+
+            <ul class="info-list">
+              <li>
+                <span class="info-list__label">Teléfono</span>
+                <a href="#" data-tel data-cfg="telefono">TU NÚMERO DE TELÉFONO</a>
+              </li>
+              <li>
+                <span class="info-list__label">Instagram</span>
+                <a href="#" data-ig target="_blank" rel="noopener" data-cfg="instagramTexto">@TU_USUARIO</a>
+              </li>
+              <li>
+                <span class="info-list__label">Zona de entrega</span>
+                <span data-cfg="zona">TU DIRECCIÓN O ZONA DE ENTREGA</span>
+              </li>
+              <li>
+                <span class="info-list__label">Horarios</span>
+                <ul class="hours" data-hours></ul>
+              </li>
+            </ul>
+          </div>
+
+          <form class="contact-form reveal" id="contact-form" novalidate>
+            <h3>Dejanos tu mensaje</h3>
+            <p class="contact-form__hint">
+              Este formulario no envía datos a un servidor: al completarlo se abre WhatsApp con tu mensaje listo para enviar.
+            </p>
+
+            <div class="field">
+              <label for="cf-nombre">Nombre</label>
+              <input id="cf-nombre" name="nombre" type="text" autocomplete="name" placeholder="Tu nombre" required minlength="2" maxlength="60" aria-describedby="cf-nombre-err" />
+              <p class="field__error" id="cf-nombre-err" aria-live="polite"></p>
+            </div>
+
+            <div class="field">
+              <label for="cf-telefono">Teléfono</label>
+              <input id="cf-telefono" name="telefono" type="tel" autocomplete="tel" inputmode="tel" placeholder="Ej.: 11 2345 6789" required aria-describedby="cf-telefono-err" />
+              <p class="field__error" id="cf-telefono-err" aria-live="polite"></p>
+            </div>
+
+            <div class="field">
+              <label for="cf-mensaje">Mensaje</label>
+              <textarea id="cf-mensaje" name="mensaje" rows="4" placeholder="Contanos qué necesitás: cantidad de personas, fecha, consultas…" required minlength="10" maxlength="600" aria-describedby="cf-mensaje-err"></textarea>
+              <p class="field__error" id="cf-mensaje-err" aria-live="polite"></p>
+            </div>
+
+            <button type="submit" class="btn btn--fire btn--block">Enviar por WhatsApp</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== PIE DE PÁGINA ===================== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#inicio" class="brand" aria-label="Ir al inicio">
+          <span class="brand__mark" data-logo aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 2c.6 3.2-1 5-2.6 6.8C7.8 10.6 6 12.6 6 15.5A6 6 0 0 0 12 22a6 6 0 0 0 6-6.3c0-2.2-1-4-2.3-5.4.1 1.6-.4 2.9-1.6 3.6.4-3.4-.5-7.4-2.1-11.9Z"/></svg>
+          </span>
+          <span class="brand__name" data-cfg="nombre">NOMBRE DE TU PARRILLADA</span>
+        </a>
+        <p data-cfg="eslogan">“Brasa, tiempo y buena compañía.”</p>
+      </div>
+
+      <nav aria-label="Navegación del pie de página">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#catalogo">Catálogo</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#preguntas">Preguntas frecuentes</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="#" data-tel data-cfg="telefono">TU NÚMERO DE TELÉFONO</a></li>
+          <li><span data-cfg="zona">TU DIRECCIÓN O ZONA DE ENTREGA</span></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Redes</h4>
+        <div class="socials">
+          <a href="#" data-ig target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4Zm5 5a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm5.5-1.5h.01"/></svg>
+          </a>
+          <a href="#" data-wa="consulta" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© <span id="year"></span> <span data-cfg="nombre">NOMBRE DE TU PARRILLADA</span>. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ===================== CARRITO / PEDIDO ===================== -->
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="cart" id="cart" aria-labelledby="cart-title" aria-hidden="true" role="dialog" aria-modal="true" tabindex="-1">
+    <header class="cart__head">
+      <div>
+        <p class="eyebrow" id="cart-step-label">Paso 1 de 2</p>
+        <h2 id="cart-title">Mi pedido</h2>
+      </div>
+      <button class="icon-btn" type="button" data-action="close-cart" aria-label="Cerrar pedido">✕</button>
+    </header>
+
+    <!-- Paso 1: productos -->
+    <div class="cart__body" id="cart-step-1">
+      <ul class="cart__items" id="cart-items"></ul>
+      <div class="cart__empty" id="cart-empty">
+        <span aria-hidden="true">🍖</span>
+        <p>Tu pedido está vacío.</p>
+        <button type="button" class="btn btn--ghost btn--sm" data-action="go-catalog">Ver catálogo</button>
+      </div>
+    </div>
+
+    <!-- Paso 2: resumen antes de enviar -->
+    <div class="cart__body" id="cart-step-2" hidden>
+      <div class="summary">
+        <h3>Resumen del pedido</h3>
+        <ul class="summary__list" id="summary-list"></ul>
+      </div>
+      <div class="field">
+        <label for="ord-nombre">Tu nombre</label>
+        <input id="ord-nombre" type="text" autocomplete="name" placeholder="¿A nombre de quién?" maxlength="60" />
+        <p class="field__error" id="ord-nombre-err" aria-live="polite"></p>
+      </div>
+      <fieldset class="field field--radios">
+        <legend>¿Cómo lo recibís?</legend>
+        <label><input type="radio" name="entrega" value="Envío a domicilio" checked /> Envío a domicilio</label>
+        <label><input type="radio" name="entrega" value="Retiro" /> Retiro</label>
+      </fieldset>
+      <div class="field" id="ord-dir-field">
+        <label for="ord-direccion">Dirección o barrio</label>
+        <input id="ord-direccion" type="text" autocomplete="street-address" placeholder="Calle, número, barrio" maxlength="120" />
+      </div>
+      <div class="field">
+        <label for="ord-notas">Notas (opcional)</label>
+        <textarea id="ord-notas" rows="2" maxlength="300" placeholder="Fecha, horario, punto de cocción, etc."></textarea>
+      </div>
+    </div>
+
+    <footer class="cart__foot" id="cart-foot">
+      <dl class="totals">
+        <div><dt>Subtotal</dt><dd id="cart-subtotal">$ 0</dd></div>
+        <div><dt>Envío</dt><dd id="cart-shipping">A coordinar</dd></div>
+        <div class="totals__total"><dt>Total</dt><dd id="cart-total">$ 0</dd></div>
+      </dl>
+      <p class="cart__note">No se realizan pagos en línea. El pago y la entrega se coordinan por WhatsApp.</p>
+
+      <div class="cart__actions" id="cart-actions-1">
+        <button type="button" class="btn btn--fire btn--block" data-action="review">Revisar pedido</button>
+        <button type="button" class="link-btn" data-action="clear-cart">Vaciar pedido</button>
+      </div>
+      <div class="cart__actions" id="cart-actions-2" hidden>
+        <button type="button" class="btn btn--wa btn--block" data-action="send-order">Finalizar pedido por WhatsApp</button>
+        <button type="button" class="link-btn" data-action="back">← Volver a editar</button>
+      </div>
+    </footer>
+  </aside>
+
+  <!-- Notificaciones -->
+  <div class="toasts" id="toasts" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Volver arriba -->
+  <button class="to-top" id="to-top" type="button" aria-label="Volver al inicio">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="m6 14 6-6 6 6"/></svg>
+  </button>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
